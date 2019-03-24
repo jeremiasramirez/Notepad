@@ -1,5 +1,6 @@
 body{
-
+padding:0;
+margin:0;
 }
 :root{
 	--widthInput: 100%;
@@ -9,6 +10,11 @@ body{
 	--fontF: verdana;
 	--fontS: 18px;
 	--borderR: 8px;
+}
+.titlePage{
+	font-family: arial;
+	text-align: center;
+	color: #777;
 }
 .form__notes{
 	display: flex;
@@ -50,5 +56,76 @@ body{
 	background-color: blue;
 	color: white;
 	margin-top: 1em;
+	transition: .8s;
 
 }
+.btn__send:hover{
+	opacity: .6;
+	transition: .8s;
+	cursor: pointer;
+}
+.elementContainer{
+	 width: 90vw;
+	border: 1px solid red;
+ 
+	padding: .2em;
+}
+.titleCard{
+	font-family: sans-serif;
+	text-align: center;
+	word-break: break-all;
+	border-bottom: 1px solid #444;
+	color: orange;
+	margin: .2em 0 1em  0;
+	padding: .3em 0 .3em 0;
+}
+.descriptionCard{
+	font-family: arial;
+	text-align: center;
+	word-break: break-all;
+	color: #bbb;
+	margin: -.4em .3em .4em .3em;
+}
+.elementContainer{
+	background-color: #222;
+	border-radius: 6px;
+	border:0;
+	margin: .5em;
+
+ 
+}
+.cards{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	align-items: center;
+	margin: .5em;
+	padding: .5em;
+}
+.validate{
+	text-align: center;
+	background-color: green;
+	margin: 0;
+	padding:.3em;
+	color: #ddd;
+	font-family: arial;
+	font-size: 18px;
+}
+
+hr{
+	color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
