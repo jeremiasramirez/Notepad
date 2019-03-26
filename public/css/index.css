@@ -1,7 +1,9 @@
 body{
 padding:0;
 margin:0;
+transform: scaleX(.9);
 }
+  
 :root{
 	--widthInput: 100%;
 	--mgInput: .2em;
@@ -48,8 +50,10 @@ margin:0;
 }
 .btn__send{
 	font-family: sans-serif;
-	width: 100px;
-	padding: .2em;
+	width: 200px;
+	display: block;
+	padding-left: 1em;
+	padding-right: 1em;
 	font-size: var(--fontS);
 	border-radius: 5px;
 	border: 0px solid grey;
@@ -90,9 +94,14 @@ margin:0;
 	background-color: #222;
 	border-radius: 6px;
 	border:0;
-	margin: .5em;
+	margin: .5em .5em .5em -.3em;
+	width: 100%;
+	transform: scale(.9);
 
  
+}
+.elementContainer:hover{
+	transform: scale(1);
 }
 .cards{
 	display: flex;
@@ -110,13 +119,64 @@ margin:0;
 	color: #ddd;
 	font-family: arial;
 	font-size: 18px;
+	border-radius: 6px;
 }
 
 hr{
 	color: #fff;
+} 
+
+.deleteWindow{
+	text-align: center;
+	background-color: red;
+	padding: var(--pdInput);
+	border-radius: 8px;
+	color: white;
+	font-size: 18px;
+	font-family: sans-serif;
+	font-weight: 600;
+}
+.button1Delete , .button2Cancel{
+	font-size: 17px;
+	border: 0;
+	border-radius: 4px;
+	margin: 0 .8em 0 .8em;
+	padding: .2em 1em .2em 1em;
+	background-color: blue;
+	color: white;
+	transition: 3s;
+}
+.button1Delete:hover , 
+.button2Cancel:hover {
+	transform: scale(.9);
+	transition: .8s;
 }
 
+.button1Delete:hover , 
+.button2Cancel:hover ,
+.elementContainer:hover{
+	transition: 1s;
+	opacity: .8;
+	cursor: pointer
+ }
 
+.button2Cancel{
+	font-weight: 700;
+	background-color: orange;
+}
+.messageExit{
+	background-color: green;
+	color:white;
+	font-family: sans-serif;
+	text-align: center;
+	padding: .4em;
+	border-radius: 5px;
+	word-spacing: .8px;
+	font-weight: 700;
+	 width: 100%;
+	 font-size: 19px;
+ 
+}
 
 
 
