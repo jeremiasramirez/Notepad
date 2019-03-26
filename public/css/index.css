@@ -9,8 +9,8 @@ transform: scaleX(.9);
 	--mgInput: .2em;
 	--pdInput: .5em;
 	--ta: center;
-	--fontF: verdana;
-	--fontS: 18px;
+	--fontF: sans-serif;
+	--fontS: 20px;
 	--borderR: 8px;
 }
 .titlePage{

@@ -52,7 +52,7 @@ class CreateCard{
 					valid.appendChild(no);
 
 					let nots = document.getElementById("button2Cancel")
-
+ 
 				document.body.insertAdjacentElement("afterbegin",valid);
 
 				yes.addEventListener("click",(e)=>{
@@ -64,7 +64,7 @@ class CreateCard{
 						msjDeletedExit.remove();
 					},1000)
 					document.body.insertAdjacentElement("afterbegin",msjDeletedExit);
-
+ 
 					if(valid){
 						setTimeout((e)=>{
 							valid.remove();
