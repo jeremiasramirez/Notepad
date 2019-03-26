@@ -80,6 +80,7 @@ transform: scaleX(.9);
 	word-break: break-all;
 	border-bottom: 1px solid #444;
 	color: orange;
+	font-size: 18px;
 	margin: .2em 0 1em  0;
 	padding: .3em 0 .3em 0;
 }
