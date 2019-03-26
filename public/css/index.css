@@ -98,11 +98,12 @@ transform: scaleX(.9);
 	margin: .5em .5em .5em -.3em;
 	width: 100%;
 	transform: scale(.9);
-
+	transition:1s;
  
 }
 .elementContainer:hover{
 	transform: scale(1);
+	box-shadow: 1px 1px 3px 5px blue;
 }
 .cards{
 	display: flex;
