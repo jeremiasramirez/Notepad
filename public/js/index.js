@@ -118,7 +118,7 @@ let description = document.getElementById("note__description");
 let buttonSend = document.getElementById("btn__send");
  
 buttonSend.addEventListener("click",(e)=>{
-	if(title.value !== "" && description.value !== "" && title.value.length <= 20){
+	if(title.value !== "" && description.value !== "" && title.value.length <= 40){
 		let empty = document.getElementById("empty__notes");
 		if(empty){
 			empty.remove();
