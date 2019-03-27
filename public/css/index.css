@@ -3,7 +3,7 @@ padding:0;
 margin:0;
 transform: scaleX(.9);
 }
-  
+
 :root{
 	--widthInput: 100%;
 	--mgInput: .2em;
@@ -35,7 +35,7 @@ transform: scaleX(.9);
 	border: 0px solid grey;
 	background-color: #ddd;
 	letter-spacing: .8px;
-} 
+}
 .note__description{
 	text-align: var(--ta);
  	margin: var(--mgInput);
@@ -66,15 +66,18 @@ transform: scaleX(.9);
 
 }
 .btn__send:hover{
+
 	opacity: .6;
 	transition: .8s;
 	cursor: pointer;
+
 }
 .elementContainer{
+
 	 width: 90vw;
-	border: 1px solid red;
- 
-	padding: .2em;
+   border: 1px solid red;
+	 padding: .2em;
+
 }
 .titleCard{
 	font-family: sans-serif;
@@ -94,6 +97,7 @@ transform: scaleX(.9);
 	margin: -.4em .3em .4em .3em;
 }
 .elementContainer{
+
 	background-color: #222;
 	border-radius: 6px;
 	border:0;
@@ -101,7 +105,7 @@ transform: scaleX(.9);
 	width: 100%;
 	transform: scale(.9);
 	transition:1s;
- 
+
 }
 .elementContainer:hover{
 	transform: scale(1);
@@ -128,7 +132,7 @@ transform: scaleX(.9);
 
 hr{
 	color: #fff;
-} 
+}
 
 .deleteWindow{
 	text-align: center;
@@ -139,6 +143,7 @@ hr{
 	font-size: 18px;
 	font-family: sans-serif;
 	font-weight: 600;
+
 }
 .button1Delete , .button2Cancel{
 	font-size: 17px;
@@ -149,16 +154,16 @@ hr{
 	background-color: blue;
 	color: white;
 	transition: 3s;
+  margin-top: .3em;
 }
-.button1Delete:hover , 
+.button1Delete:hover ,
 .button2Cancel:hover {
 	transform: scale(.9);
 	transition: .8s;
 }
 
-.button1Delete:hover , 
-.button2Cancel:hover ,
-.elementContainer:hover{
+.button1Delete:hover ,
+.button2Cancel:hover {
 	transition: 1s;
 	opacity: .9;
 	cursor: pointer
@@ -179,14 +184,14 @@ hr{
 	font-weight: 700;
 	 width: 100%;
 	 font-size: 19px;
-	
+
 }
 
 .load{
 	animation:load 1s linear;
 	transition:1s;
 	font-size: 20px;
-	 
+
 }
 @keyframes load{
 	to{
@@ -194,13 +199,3 @@ hr{
 		transition:1s;
 	}
 }
-
-
-
-
-
-
-
-
-
-
