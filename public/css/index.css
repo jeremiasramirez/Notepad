@@ -34,6 +34,7 @@ transform: scaleX(.9);
 	border-radius: var(--borderR);
 	border: 0px solid grey;
 	background-color: #ddd;
+	letter-spacing: .8px;
 } 
 .note__description{
 	text-align: var(--ta);
@@ -47,6 +48,7 @@ transform: scaleX(.9);
 	background-color: #ddd;
 	height: 100px;
 	word-wrap: wrap;
+	letter-spacing: .6px;
 }
 .btn__send{
 	font-family: sans-serif;
@@ -103,7 +105,7 @@ transform: scaleX(.9);
 }
 .elementContainer:hover{
 	transform: scale(1);
-	box-shadow: 1px 1px 3px 5px blue;
+	box-shadow: 1px 1px 3px 5px grey;
 }
 .cards{
 	display: flex;
@@ -158,7 +160,7 @@ hr{
 .button2Cancel:hover ,
 .elementContainer:hover{
 	transition: 1s;
-	opacity: .8;
+	opacity: .9;
 	cursor: pointer
  }
 
@@ -177,10 +179,21 @@ hr{
 	font-weight: 700;
 	 width: 100%;
 	 font-size: 19px;
- 
+	
 }
 
-
+.load{
+	animation:load 1s linear;
+	transition:1s;
+	font-size: 20px;
+	 
+}
+@keyframes load{
+	to{
+		transform: rotate(60deg);
+		transition:1s;
+	}
+}
 
 
 

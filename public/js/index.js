@@ -34,7 +34,7 @@ class CreateCard{
 				 
 					setTimeout(()=>{
 						if(valid)valid.remove();
-					},2000)
+					},5000)
 
 
 				let yes = document.createElement("button");
@@ -59,25 +59,27 @@ class CreateCard{
 					remov.remove();
 					let msjDeletedExit = document.createElement("p");
 					msjDeletedExit.textContent = " Nota eliminada ";
-					msjDeletedExit.setAttribute("class","messageExit far fa-check-circle");
+					msjDeletedExit.setAttribute("class","messageExit far fa-trash-alt");
+					 
 					setTimeout(()=>{
 						msjDeletedExit.remove();
-					},1000)
+					},2500)
 					document.body.insertAdjacentElement("afterbegin",msjDeletedExit);
  
+
+
 					if(valid){
+
 						setTimeout((e)=>{
 							valid.remove();
-						
 						},0)
-						 
-						
-							
-						 
+						 						 
 						
 					}	
 				},false);
+
 				no.addEventListener("click",(e)=>{
+
 					setTimeout((e)=>{
 						valid.remove();
 					},500)
@@ -121,10 +123,13 @@ buttonSend.addEventListener("click",(e)=>{
 	if(title.value !== "" && description.value !== "" && title.value.length <= 40){
 		let empty = document.getElementById("empty__notes");
 		if(empty){
-			empty.remove();
+			empty.textContent += " cargando.. ";
+			setTimeout((e)=>{
+				empty.remove();
+			},3000)
+			
 		}
 		let cr = new CreateCard(title.value ,description.value);
-		localStorage.setItem(title.value,description.value);
 
 			cr.createCard();
 			cr.createdValidate();
@@ -132,6 +137,8 @@ buttonSend.addEventListener("click",(e)=>{
 			
 			title.value = "";
 			description.value = "";
+		 
+			 
 	}
 
 },false)
