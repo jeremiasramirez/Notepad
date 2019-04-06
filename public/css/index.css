@@ -2,6 +2,7 @@ body{
 padding:0;
 margin:0;
 transform: scaleX(.9);
+ 
 }
 
 :root{
@@ -17,6 +18,12 @@ transform: scaleX(.9);
 	font-family: arial;
 	text-align: center;
 	color: #777;
+	font-size: 30px;
+	color: white;
+}
+.fa-book{
+	color: white;
+	font-size: 23px;
 }
 .form__notes{
 	display: flex;
@@ -91,6 +98,8 @@ transform: scaleX(.9);
 	font-size: 18px;
 	margin: .2em 0 1em  0;
 	padding: .3em 0 .3em 0;
+	font-family: 'Aleo', serif;
+	letter-spacing: .9px;
 }
 .descriptionCard{
 	font-family: arial;
@@ -98,6 +107,7 @@ transform: scaleX(.9);
 	word-break: break-all;
 	color: #bbb;
 	margin: -.4em .3em .4em .3em;
+	letter-spacing: .2px;
 }
 .elementContainer{
 
@@ -111,8 +121,12 @@ transform: scaleX(.9);
 
 }
 .elementContainer:hover{
-	transform: scale(1.4);
+	transform: scale(1);
 	box-shadow: 1px 1px 3px 5px grey;
+	font-size: 1.4em;
+}
+.elementContainer:hover .titleCard{
+	font-size: 1.3em;
 }
 .cards{
 	display: flex;
@@ -157,7 +171,7 @@ hr{
 	background-color: blue;
 	color: white;
 	transition: 3s;
-  margin-top: .3em;
+    margin-top: .3em;
 }
 .button1Delete:hover ,
 .button2Cancel:hover {
@@ -201,4 +215,12 @@ hr{
 		transform: rotate(60deg);
 		transition:1s;
 	}
+}
+.containerTitlePage{
+	position: sticky;
+	top: 0;
+	background-color: blue;
+	border-radius: 5px;
+	z-index: 10000;
+	opacity: .7;
 }
