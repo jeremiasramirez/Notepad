@@ -30,18 +30,20 @@ transform: scaleX(.9);
  	padding: var(--pdInput);
  	text-align: var(--ta);
 	font-size: var(--fontS);
-	font-family: var(--fontF);
+	font-family: 'Aleo', serif;
 	border-radius: var(--borderR);
 	border: 0px solid grey;
 	background-color: #ddd;
 	letter-spacing: .8px;
+	color: #222;
+	font-weight: 700;
 }
 .note__description{
 	text-align: var(--ta);
  	margin: var(--mgInput);
  	width: var(--widthInput);
  	padding: var(--pdInput);
- 	font-family: var(--fontF);
+ 	font-family: 'Aleo', serif;
 	font-size: var(--fontS);
 	border-radius: var(--borderR);
 	border: 0px solid grey;
@@ -49,6 +51,7 @@ transform: scaleX(.9);
 	height: 100px;
 	word-wrap: wrap;
 	letter-spacing: .6px;
+	color: #222;
 }
 .btn__send{
 	font-family: sans-serif;
