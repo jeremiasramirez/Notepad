@@ -111,7 +111,7 @@ transform: scaleX(.9);
 
 }
 .elementContainer:hover{
-	transform: scale(1);
+	transform: scale(1.4);
 	box-shadow: 1px 1px 3px 5px grey;
 }
 .cards{
