@@ -8,5 +8,7 @@ agregar notas (add notes)
  2. Visualizar notas
  		
 	para visualizarla mejor solo tienes que pasar el mouse por encima de la nota que quieres visualizar.
+	
+FIN(usar la app)
  
  
