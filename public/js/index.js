@@ -48,9 +48,6 @@ class CreateCard{
 									},3000)
 
 
-
-
-
 				let yes = document.createElement("button"),
 						no = document.createElement("button"),
 						nots = document.getElementById("button2Cancel"),
@@ -89,7 +86,6 @@ class CreateCard{
 						setTimeout((e)=>{
 							valid.remove();
 						},0)
-
 					}
 
 				},false);
@@ -104,11 +100,7 @@ class CreateCard{
 
 		  	},false)
 		}
-
-
-
 }
-
 
 	createdValidate(){
 		let text = document.createElement("p"),
