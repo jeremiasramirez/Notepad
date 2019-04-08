@@ -68,7 +68,7 @@ transform: scaleX(.9);
 	padding-right: 1em;
 	font-size: var(--fontS);
 	border-radius: 5px;
-	border: 0px solid grey;
+	border: 1.5px solid blue;
 	background-color: blue;
 	color: white;
 	margin-top: 1em;
@@ -80,12 +80,17 @@ transform: scaleX(.9);
 	opacity: .6;
 	transition: .8s;
 	cursor: pointer;
+	border: 1.5px solid orange;
+	background-color: white;
 
+}
+.btn__send:hover .fa-paper-plane{
+	color: blue;
 }
 .elementContainer{
 
 	 width: 90vw;
-   border: 1px solid red;
+     border: 1px solid red;
 	 padding: .2em;
 
 }
