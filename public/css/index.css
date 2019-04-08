@@ -124,9 +124,13 @@ transform: scaleX(.9);
 	transform: scale(1);
 	box-shadow: 1px 1px 3px 5px grey;
 	font-size: 1.4em;
+	background-color: black;
 }
 .elementContainer:hover .titleCard{
 	font-size: 1.3em;
+}
+.elementContainer:hover .descriptionCard{
+	color: white;
 }
 .cards{
 	display: flex;
