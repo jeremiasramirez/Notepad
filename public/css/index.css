@@ -117,7 +117,7 @@ transform: scaleX(.9);
 	margin: .5em .5em .5em -.3em;
 	width: 100%;
 	transform: scale(.9);
-	transition:1s;
+	transition:3s;
 
 }
 .elementContainer:hover{
@@ -125,6 +125,7 @@ transform: scaleX(.9);
 	box-shadow: 1px 1px 3px 5px grey;
 	font-size: 1.4em;
 	background-color: black;
+	transition:3s;
 }
 .elementContainer:hover .titleCard{
 	font-size: 1.3em;
