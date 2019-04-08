@@ -234,3 +234,8 @@ hr{
 	z-index: 10000;
 	opacity: .7;
 }
+.fa-folder-open{transition: 3s;}
+.fa-folder-open:hover{
+	color: orangered;
+	transition: .3s
+}
