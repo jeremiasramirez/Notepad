@@ -157,3 +157,34 @@ buttonSend.addEventListener("click",(e)=>{
 },false)
 
 })(title,description,buttonSend)
+
+ let logo = document.getElementById("titlePage-js"),
+ 		 formDisabled = document.getElementById("form-js"),
+		 maxScroll = window.scrollY,
+	 	 minScroll = 0;
+
+(function(logo, maxScroll, minScroll){
+	
+		logo.addEventListener("click", (e)=>{
+
+			if( (maxScroll) >= (minScroll) ){
+				 window.scrollTo(0,0)
+			}
+			 
+		}, false);
+
+
+
+})(logo, maxScroll, minScroll);
+
+
+
+//funcion para que no envie el formulario a backend
+
+(function(formDisabled){
+
+	formDisabled.addEventListener("click", (e)=>{
+		e.preventDefault()
+	}, false)
+
+})(formDisabled);
