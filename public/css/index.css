@@ -14,7 +14,9 @@ transform: scaleX(.9);
 	--fontS: 20px;
 	--borderR: 8px;
 }
-
+.containerTitlePage{
+	margin-top: -1.3em;
+}
 .titlePage{
 	font-family: arial;
 	text-align: center;
