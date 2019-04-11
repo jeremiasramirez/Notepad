@@ -9,6 +9,10 @@ agregar notas (add notes)
  		
 	para visualizarla mejor solo tienes que pasar el mouse por encima de la nota que quieres visualizar.
 	
+ 3. Volver arriba
+ 	
+	si se encuentra arriba dar un click al logo  de Notepad para volver a la primera nota 
+	
 FIN(usar la app)
  
  

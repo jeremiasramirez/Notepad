@@ -124,25 +124,75 @@ class CreateCard{
 let title = document.getElementById("note__title"),
 			description = document.getElementById("note__description"),
 	 		buttonSend = document.getElementById("btn__send");
+	 		fa_plane = document.getElementById("fa-plane");
+//funcion que elimina un elemento html en 3 segundos, le pasamos el elemento
+function deletingItem(empty){
+
+		setTimeout((e)=>{
+
+			empty.remove();
+		 
+		},3000)
+
+}
+
+//elimina la clase de un elemento , recibe el elemento y la clase del elemento
+function deleteWithClass(elements,classElement){
+	elements.classList.remove(classElement);
+}
+
+//agrega clase a un elemento , recibe el elemento y la clase del elemento
+function addWithClass(elements,classElement){
+	elements.classList.add(classElement);
+}
+
+/*
+ *elimina la clase de un elemento en tiempo definido (segundos), recibe el elemento html,
+  la clase del elemento y el tiempo en milisegundos
+*/
+function deleteWithClassTime(elements, classElement, definitiveTime){
+	let elementTime = setTimeout((e)=>{
+		elements.classList.remove(classElement);
+	}, definitiveTime);
+}
+
+
+/*
+ *agrega clase a un elemento en tiempo definido (segundos), recibe el elemento html, la clase del elemento
+ y los segundos en milisegundos
+*/
+function addWithClassTime(elements, classElement, definitiveTime){
+	let elementTime = setTimeout((e)=>{
+		elements.classList.add(classElement);
+	}, definitiveTime)
+}
+
 
 (function getData(title,description,buttonSend){
 
 buttonSend.addEventListener("click",(e)=>{
 
-	if(	(title.value !== "")  && (description.value !== "") && (title.value.length <= 40) ){
+	if(	(title.value !== " " && title.value !== "")  && 
+		(description.value !== " " && description.value !== "") && 
+		(title.value.length <= 28) ){
 
+		 
+		addWithClass(fa_plane,"fa-plane");
+		deleteWithClassTime(fa_plane,"fa-plane",2000);
+		
 		let empty = document.getElementById("empty__notes");
+
+		deleteWithClass(fa_plane,"fa-plane-warning");
+
+		fa_plane.classList.remove("fa-plane-warning");
 
 		if(empty){
 
 			empty.textContent += " cargando.. ";
-
-			setTimeout((e)=>{
-				empty.remove();
-			},3000)
-
-
+			deletingItem(empty)
+			 
 		}
+	
 		let cr = new CreateCard(title.value ,description.value);
 
 			cr.createCard();
@@ -153,7 +203,39 @@ buttonSend.addEventListener("click",(e)=>{
 			description.value = "";
 
 	}
+		else{
+			let backgroundButton = document.getElementById("btn__send");
+				addWithClass(fa_plane,"fa-plane-warning");
+				addWithClass(backgroundButton,"fa-errors",2000)
+				deleteWithClassTime(fa_plane,"fa-plane-warning",2000)
+			  
+
+				 
+		}
 
 },false)
 
 })(title,description,buttonSend)
+
+ let logo = document.getElementById("titlePage-js"),
+ 		 formDisabled = document.getElementById("form-js"),
+		 maxScroll = window.scrollY,
+	 	 minScroll = 0;
+
+(function(logo, maxScroll, minScroll){
+	
+		logo.addEventListener("click", (e)=>{
+
+			if( (maxScroll) >= (minScroll) ){
+				 window.scrollTo(0,0)
+			}
+			 
+		}, false);
+
+
+
+})(logo, maxScroll, minScroll);
+
+
+
+ 

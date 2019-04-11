@@ -14,12 +14,18 @@ transform: scaleX(.9);
 	--fontS: 20px;
 	--borderR: 8px;
 }
+.containerTitlePage{
+	margin-top: -1.3em;
+}
 .titlePage{
 	font-family: arial;
 	text-align: center;
 	color: #777;
 	font-size: 30px;
 	color: white;
+}
+.titlePage:hover{
+	cursor: pointer;
 }
 .fa-book{
 	color: white;
@@ -236,8 +242,8 @@ hr{
 	opacity: .7;
 	margin-top: -1.3em;
 }
-.fa-folder-open{transition: 3s;}
-.fa-folder-open:hover{
-	color: orangered;
-	transition: .3s
-}
+.fa-folder-open{ transition: 3s; }
+.fa-folder-open:hover{ color: orangered;transition: .3s; }
+.fa-plane-warning {color: red;}
+.fa-plane {color: red;}
+ 
