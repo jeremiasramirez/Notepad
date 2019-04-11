@@ -230,9 +230,11 @@ hr{
 	position: sticky;
 	top: 0;
 	background-color: blue;
-	border-radius: 5px;
+	border-bottom-left-radius: 9px;
+	border-bottom-right-radius: 9px;
 	z-index: 10000;
 	opacity: .7;
+	margin-top: -1.3em;
 }
 .fa-folder-open{transition: 3s;}
 .fa-folder-open:hover{
