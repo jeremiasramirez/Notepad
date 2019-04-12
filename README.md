@@ -1,5 +1,5 @@
 # Notepad
-agregar notas (add notes)
+agregar notas en formas de cards(add note)
 
 1. Eliminar notas
  
