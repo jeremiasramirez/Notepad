@@ -9,6 +9,7 @@ class CreateCard{
 		/*
 		  creando elementos html para la interfaz de la card
 		*/
+
 		let cardsContainer = document.getElementById("cards"),
 		 		elementContainer = document.createElement("div"),
 				titleElement= document.createElement("h1"),
@@ -31,11 +32,12 @@ class CreateCard{
 			let remov = document.getElementById("elementContainerR");
 			// verificando si la card creado existe para poder eliminarla
 		if(remov!==null && remov !== undefined){
-
+			let itera = 0;
 			remov.addEventListener("dblclick",(e)=>{
 				let rm = document.getElementById("deleteWindow");
 				if( rm ){
 						document.getElementById("deleteWindow").remove();
+						localStorage.removeItem(iterator);
 				}
 
 					let valid = document.createElement("div");
@@ -103,9 +105,10 @@ class CreateCard{
 }
 
 	createdValidate(){
-		let text = document.createElement("p"),
+
+			let text = document.createElement("p"),
 				icon = document.createElement("i");
-			text.textContent = "Haz creado una nota ";
+				text.textContent = "Haz creado una nota ";
 
 				icon.setAttribute("class","far fa-check-circle");
 
@@ -117,6 +120,7 @@ class CreateCard{
 			let time = setTimeout((e)=>{
 				text.remove();
 			},1000)
+
 	}
 }
 
@@ -150,7 +154,7 @@ function addWithClass(elements,classElement){
  *elimina la clase de un elemento en tiempo definido (segundos), recibe el elemento html,
   la clase del elemento y el tiempo en milisegundos
 */
-function deleteWithClassTime(elements, classElement, definitiveTime){
+let deleteWithClassTime = (elements, classElement, definitiveTime) => {
 	let elementTime = setTimeout((e)=>{
 		elements.classList.remove(classElement);
 	}, definitiveTime);
@@ -166,7 +170,7 @@ function addWithClassTime(elements, classElement, definitiveTime){
 		elements.classList.add(classElement);
 	}, definitiveTime)
 }
-
+ 
 
 (function getData(title,description,buttonSend){
 
@@ -176,7 +180,7 @@ buttonSend.addEventListener("click",(e)=>{
 		(description.value !== " " && description.value !== "") && 
 		(title.value.length <= 28) ){
 
-		 
+		
 		addWithClass(fa_plane,"fa-plane");
 		deleteWithClassTime(fa_plane,"fa-plane",2000);
 		
@@ -222,7 +226,7 @@ buttonSend.addEventListener("click",(e)=>{
 		 maxScroll = window.scrollY,
 	 	 minScroll = 0;
 
-(function(logo, maxScroll, minScroll){
+let scrolling = (logo, maxScroll, minScroll) => {
 	
 		logo.addEventListener("click", (e)=>{
 
@@ -232,9 +236,8 @@ buttonSend.addEventListener("click",(e)=>{
 			 
 		}, false);
 
-
-
-})(logo, maxScroll, minScroll);
+}
+scrolling(logo, maxScroll, minScroll);
 
 
 
