@@ -142,14 +142,14 @@ transform: scaleX(.9);
 	box-shadow: 1px 1px 3px 5px grey;
 	font-size: 1.4em;
 	background-color: black;
-	transition:3s 1s;
+	transition:3s;
 }
 .elementContainer:hover .titleCard{
-	transition:3s 1s;
+	/*transition:3s 1s;*/
 	font-size: 1.3em;
 }
 .elementContainer:hover .descriptionCard{
-	transition:3s 1s;
+	/*transition:3s 1s;*/
 	color: white;
 }
  
@@ -163,14 +163,18 @@ transform: scaleX(.9);
 }
 .validate{
 	text-align: center;
-	border: 2px solid orange;
+	border: 0;
 	margin: 0;
-	padding:.3em;
+	padding:.7em;
 	margin-bottom: 1em;
-	color: #222;
+	background-color: #222;
+	color: #ddd;
 	font-family: arial;
-	font-size: 18px;
+	font-size: 19px;
 	border-radius: 6px;
+	position: sticky;
+	top: 0;
+	z-index: 400;
 }
 
 hr{
@@ -179,14 +183,18 @@ hr{
 
 .deleteWindow{
 	text-align: center;
-	border: 2px solid orange;
+	border: 0;
 	padding: var(--pdInput);
+	background-color: #222;
 	border-radius: 8px;
-	color: #222;
+	color: #ddd;
 	font-size: 18px;
 	font-family: sans-serif;
 	font-weight: 600;
-
+	position: sticky;
+	top: 0;
+	z-index: 200;
+	margin-bottom: -1em;
 }
 .button1Delete , .button2Cancel{
 	font-size: 17px;
@@ -203,31 +211,33 @@ hr{
 .button2Cancel:hover {
 	transform: scale(.9);
 	transition: .8s;
-}
-
-.button1Delete:hover ,
-.button2Cancel:hover {
 	transition: 1s;
 	opacity: .9;
 	cursor: pointer
- }
+}
+ 
 
 .button2Cancel{
 	font-weight: 700;
-	background-color: orange;
+	background-color: red;
 }
 .messageExit{
-	border: 2px solid orange;
-	color: #222;
+	position: sticky;
+	top:0;
+	z-index: 600;
+	border: 0;
+	color: #ddd;
 	font-family: sans-serif;
 	text-align: center;
-	padding: .4em;
+	padding-top: .8em;
+	padding-bottom: .8em;
 	border-radius: 5px;
 	word-spacing: .8px;
 	font-weight: 700;
 	width: 100%;
 	font-size: 19px;
-
+	background-color: #222;
+	margin: 0;
 }
 
 .load{
@@ -248,8 +258,8 @@ hr{
 	background-color: orange;
 	border-bottom-left-radius: 9px;
 	border-bottom-right-radius: 9px;
-	z-index: 10000;
-	opacity: .7;
+	z-index: 100;
+	opacity: .9;
 	margin-top: -1.3em;
 	transition: opacity .8s;
 }
@@ -266,5 +276,8 @@ hr{
 	border-radius: 50%;
 	color: white;
  }
+ .opacity{
+ 	transition: 0;
+ 	opacity: .7;
+ }
  
-

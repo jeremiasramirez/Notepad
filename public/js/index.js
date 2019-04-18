@@ -36,11 +36,16 @@ class CreateCard{
 
 		if( (remov !== null) && (remov !== undefined) ){
 			let itera = 0;
+
 			remov.addEventListener("dblclick",(e)=>{
 
+				addWithClass(remov, "opacity")
+				deleteWithClassTime(remov, "opacity", 3000)
+
 				let rm = document.getElementById("deleteWindow");
+
 				if( rm ){
-						document.getElementById("deleteWindow").remove();
+					document.getElementById("deleteWindow").remove();
 				}
 
 					let valid = document.createElement("div");
@@ -78,7 +83,7 @@ class CreateCard{
  
 					remov.remove();
 
-					msjDeletedExit.textContent = " Nota eliminada ";
+					msjDeletedExit.textContent = " Eliminada correctamente ";
 					msjDeletedExit.setAttribute("class","messageExit far fa-trash-alt");
 
 					setTimeout( () => {
