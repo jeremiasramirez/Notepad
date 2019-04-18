@@ -259,4 +259,10 @@ hr{
 .fa-folder-open:hover{ color: orangered;transition: .3s; }
 .fa-plane-warning {color: red;}
 .fa-plane {color: red;}
+.fa-check-circle{
+	background-color: blue;
+	border-radius: 50%;
+	color: white;
+ }
  
+
