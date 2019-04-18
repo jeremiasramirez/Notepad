@@ -50,7 +50,9 @@ transform: scaleX(.9);
 	letter-spacing: .8px;
 	color: #222;
 	font-weight: 700;
+	transition: opacity .8s;
 }
+
 .note__description{
 	text-align: var(--ta);
  	margin: var(--mgInput);
@@ -65,6 +67,10 @@ transform: scaleX(.9);
 	word-wrap: wrap;
 	letter-spacing: .6px;
 	color: #222;
+	transition: opacity .8s;
+}
+.note__description:hover, .note__title:hover {
+	opacity: .6;
 }
 .btn__send{
 	font-family: sans-serif;
@@ -86,7 +92,7 @@ transform: scaleX(.9);
 	opacity: .6;
 	transition: .8s;
 	cursor: pointer;
-	border: 1.5px solid orange;
+	border: 1.5px solid #ec9b21;
 	background-color: white;
 
 }
@@ -144,6 +150,7 @@ transform: scaleX(.9);
 .elementContainer:hover .descriptionCard{
 	color: white;
 }
+ 
 .cards{
 	display: flex;
 	justify-content: center;
@@ -154,10 +161,11 @@ transform: scaleX(.9);
 }
 .validate{
 	text-align: center;
-	background-color: green;
+	border: 2px solid orange;
 	margin: 0;
 	padding:.3em;
-	color: #ddd;
+	margin-bottom: 1em;
+	color: #222;
 	font-family: arial;
 	font-size: 18px;
 	border-radius: 6px;
@@ -169,10 +177,10 @@ hr{
 
 .deleteWindow{
 	text-align: center;
-	background-color: red;
+	border: 2px solid orange;
 	padding: var(--pdInput);
 	border-radius: 8px;
-	color: white;
+	color: #222;
 	font-size: 18px;
 	font-family: sans-serif;
 	font-weight: 600;
@@ -207,16 +215,16 @@ hr{
 	background-color: orange;
 }
 .messageExit{
-	background-color: green;
-	color:white;
+	border: 2px solid orange;
+	color: #222;
 	font-family: sans-serif;
 	text-align: center;
 	padding: .4em;
 	border-radius: 5px;
 	word-spacing: .8px;
 	font-weight: 700;
-	 width: 100%;
-	 font-size: 19px;
+	width: 100%;
+	font-size: 19px;
 
 }
 
@@ -235,12 +243,17 @@ hr{
 .containerTitlePage{
 	position: sticky;
 	top: 0;
-	background-color: blue;
+	background-color: #ec9b21;
 	border-bottom-left-radius: 9px;
 	border-bottom-right-radius: 9px;
 	z-index: 10000;
 	opacity: .7;
 	margin-top: -1.3em;
+	transition: opacity .8s;
+}
+.containerTitlePage:hover {
+	background-color: orange;
+	opacity: .6;
 }
 .fa-folder-open{ transition: 3s; }
 .fa-folder-open:hover{ color: orangered;transition: .3s; }

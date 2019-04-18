@@ -1,3 +1,4 @@
+  
 class CreateCard{
 	constructor(title,description){
 		// Entrada de datos
@@ -12,12 +13,12 @@ class CreateCard{
 
 		let cardsContainer = document.getElementById("cards"),
 		 		elementContainer = document.createElement("div"),
-				titleElement= document.createElement("h1"),
-				descriptionElement= document.createElement("p");
+				titleElement = document.createElement("h1"),
+				descriptionElement = document.createElement("p");
 
-
-			elementContainer.setAttribute("class","elementContainer");
-			elementContainer.setAttribute("id","elementContainerR");
+		 
+			elementContainer.setAttribute("class", "elementContainer"),
+			elementContainer.setAttribute("id","elementContainerR"),
 			cardsContainer.insertAdjacentElement("afterend",elementContainer);
 
 
@@ -30,14 +31,16 @@ class CreateCard{
 			descriptionElement.textContent = this.description;
 			elementContainer.appendChild(descriptionElement);
 			let remov = document.getElementById("elementContainerR");
-			// verificando si la card creado existe para poder eliminarla
-		if(remov!==null && remov !== undefined){
+
+			// verificando si la card creado existe para poder eliminarla cuando se requiera
+
+		if( (remov !== null) && (remov !== undefined) ){
 			let itera = 0;
 			remov.addEventListener("dblclick",(e)=>{
+
 				let rm = document.getElementById("deleteWindow");
 				if( rm ){
 						document.getElementById("deleteWindow").remove();
-						localStorage.removeItem(iterator);
 				}
 
 					let valid = document.createElement("div");
@@ -49,8 +52,9 @@ class CreateCard{
 										if(valid)valid.remove();
 									},3000)
 
-
+// button de "acepto" eliminar
 				let yes = document.createElement("button"),
+// button de "no acepto eliminar
 						no = document.createElement("button"),
 						nots = document.getElementById("button2Cancel"),
 						msjDeletedExit = document.createElement("p");
@@ -69,38 +73,38 @@ class CreateCard{
 					valid.appendChild(no);
 
 				document.body.insertAdjacentElement("afterbegin",valid);
-
-				yes.addEventListener("click",(e)=>{
-
+//al clickear "acepto" elimina la nota seleccionada
+				yes.addEventListener("click", (e) => {
+ 
 					remov.remove();
 
 					msjDeletedExit.textContent = " Nota eliminada ";
 					msjDeletedExit.setAttribute("class","messageExit far fa-trash-alt");
 
-					setTimeout(()=>{
+					setTimeout( () => {
 						msjDeletedExit.remove();
 					},2500)
 
-					document.body.insertAdjacentElement("afterbegin",msjDeletedExit);
+					document.body.insertAdjacentElement("afterbegin", msjDeletedExit);
 
-					if(valid){
+					if( (valid) ){
 
-						setTimeout((e)=>{
+						setTimeout( () => {
 							valid.remove();
-						},0)
+						}, 0)
 					}
 
-				},false);
+				}, false);
+//si no quieres eliminarla darle a cancelar
+				no.addEventListener("click", (e) => {
 
-				no.addEventListener("click",(e)=>{
-
-					setTimeout((e)=>{
+					setTimeout( (e) => {
 						valid.remove();
-				    	},500)
+				    	}, 500)
 
-			  	},false)
+			  	}, false)
 
-		  	},false)
+		  	}, false)
 		}
 }
 
@@ -113,24 +117,24 @@ class CreateCard{
 				icon.setAttribute("class","far fa-check-circle");
 
 				text.appendChild(icon)
-				text.setAttribute("class","validate");
+				text.setAttribute("class", "validate");
 
-			document.body.insertAdjacentElement("afterbegin",text);
+			document.body.insertAdjacentElement("afterbegin", text);
 
-			let time = setTimeout((e)=>{
+			let time = setTimeout( (e) => {
 				text.remove();
-			},1000)
+			}, 1000)
 
 	}
 }
-
 
 let title = document.getElementById("note__title"),
 			description = document.getElementById("note__description"),
 	 		buttonSend = document.getElementById("btn__send");
 	 		fa_plane = document.getElementById("fa-plane");
+
 //funcion que elimina un elemento html en 3 segundos, le pasamos el elemento
-function deletingItem(empty){
+const deletingItem = (empty) => {
 
 		setTimeout((e)=>{
 
@@ -141,12 +145,12 @@ function deletingItem(empty){
 }
 
 //elimina la clase de un elemento , recibe el elemento y la clase del elemento
-function deleteWithClass(elements,classElement){
+const deleteWithClass = (elements, classElement) => {
 	elements.classList.remove(classElement);
 }
 
 //agrega clase a un elemento , recibe el elemento y la clase del elemento
-function addWithClass(elements,classElement){
+const addWithClass = (elements, classElement) => {
 	elements.classList.add(classElement);
 }
 
@@ -154,10 +158,12 @@ function addWithClass(elements,classElement){
  *elimina la clase de un elemento en tiempo definido (segundos), recibe el elemento html,
   la clase del elemento y el tiempo en milisegundos
 */
-let deleteWithClassTime = (elements, classElement, definitiveTime) => {
+const deleteWithClassTime = (elements, classElement, definitiveTime) => {
+
 	let elementTime = setTimeout((e)=>{
 		elements.classList.remove(classElement);
 	}, definitiveTime);
+
 }
 
 
@@ -165,14 +171,16 @@ let deleteWithClassTime = (elements, classElement, definitiveTime) => {
  *agrega clase a un elemento en tiempo definido (segundos), recibe el elemento html, la clase del elemento
  y los segundos en milisegundos
 */
-function addWithClassTime(elements, classElement, definitiveTime){
+const addWithClassTime = (elements, classElement, definitiveTime) => {
+
 	let elementTime = setTimeout((e)=>{
 		elements.classList.add(classElement);
 	}, definitiveTime)
+
 }
  
 
-(function getData(title,description,buttonSend){
+(function getDataCard(title, description, buttonSend){
 
 buttonSend.addEventListener("click",(e)=>{
 
@@ -188,7 +196,9 @@ buttonSend.addEventListener("click",(e)=>{
 
 		deleteWithClass(fa_plane,"fa-plane-warning");
 
-		fa_plane.classList.remove("fa-plane-warning");
+		 
+		deleteWithClass(fa_plane, "fa-plane-warning")
+
 
 		if(empty){
 
@@ -196,8 +206,8 @@ buttonSend.addEventListener("click",(e)=>{
 			deletingItem(empty)
 			 
 		}
-	
-		let cr = new CreateCard(title.value ,description.value);
+	// instanciacion de la clase creadora de card
+		let cr = new CreateCard(title.value, description.value);
 
 			cr.createCard();
 			cr.createdValidate();
@@ -208,18 +218,19 @@ buttonSend.addEventListener("click",(e)=>{
 
 	}
 		else{
+
 			let backgroundButton = document.getElementById("btn__send");
+
 				addWithClass(fa_plane,"fa-plane-warning");
 				addWithClass(backgroundButton,"fa-errors",2000)
 				deleteWithClassTime(fa_plane,"fa-plane-warning",2000)
-			  
-
+			 
 				 
 		}
 
 },false)
 
-})(title,description,buttonSend)
+})(title, description, buttonSend)
 
  let logo = document.getElementById("titlePage-js"),
  		 formDisabled = document.getElementById("form-js"),

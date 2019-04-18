@@ -13,6 +13,24 @@ agregar notas en formas de cards(add note)
  	
 	si se encuentra arriba dar un click al logo  de Notepad para volver a la primera nota 
 	
-FIN(usar la app)
+******doc funciones utilizadas******
+
+1. deleteWithClass(elementHtml, nameClass), elimina la clase de un elemento , recibe el elemento y la clase del elemento
+
+2. addWithClass(elements, classElement), agrega clase a un elemento , recibe el elemento y la clase del elemento que se va a poner en el.
+
+3. deleteWithClassTime(elements, classElement, definitiveTime), elimina la clase de un elemento en un tiempo definido(segundos), recibe el elemento html, la clase del elemento y el tiempo en milisegundos
+ 
+4. addWithClassTime(elementHtml, className, time) agrega clase a un elemento en tiempo definido (segundos), recibe el elemento html, la clase del elemento y los segundos en milisegundos
+ 
+
+
+
+
+
+
+
+
+
  
  
