@@ -1,6 +1,6 @@
   
 class CreateCard{
-	constructor(title,description){
+	constructor(title, description){
 		// Entrada de datos
 		this.title = title;
 		this.description = description;
@@ -18,16 +18,16 @@ class CreateCard{
 
 		 
 			elementContainer.setAttribute("class", "elementContainer"),
-			elementContainer.setAttribute("id","elementContainerR"),
-			cardsContainer.insertAdjacentElement("afterend",elementContainer);
+			elementContainer.setAttribute("id", "elementContainerR"),
+			cardsContainer.insertAdjacentElement("afterend", elementContainer);
 
 
 			titleElement.setAttribute("class","titleCard");
 			titleElement.textContent = this.title;
-			elementContainer.insertAdjacentElement("afterbegin",titleElement);
+			elementContainer.insertAdjacentElement("afterbegin", titleElement);
 
 
-			descriptionElement.setAttribute("class","descriptionCard")
+			descriptionElement.setAttribute("class", "descriptionCard")
 			descriptionElement.textContent = this.description;
 			elementContainer.appendChild(descriptionElement);
 			let remov = document.getElementById("elementContainerR");
@@ -40,17 +40,16 @@ class CreateCard{
 			remov.addEventListener("dblclick",(e)=>{
 
 				addWithClass(remov, "opacity")
-				deleteWithClassTime(remov, "opacity", 3000)
+				deleteWithClassTime(remov, "opacity", 2000)
 
 				let rm = document.getElementById("deleteWindow");
 
 				if( rm ){
-					document.getElementById("deleteWindow").remove();
+					deleteElement("deleteWindow");
 				}
 
 					let valid = document.createElement("div");
 									valid.setAttribute("class","deleteWindow");
-									valid.setAttribute("id","deleteWindow");
 									valid.setAttribute("id","deleteWindow");
 
 									setTimeout(()=>{
@@ -97,6 +96,7 @@ class CreateCard{
 						setTimeout( () => {
 							valid.remove();
 						}, 0)
+
 					}
 
 				}, false);
@@ -108,7 +108,6 @@ class CreateCard{
 				    	}, 500)
 
 			  	}, false)
-
 		  	}, false)
 		}
 }
@@ -153,6 +152,12 @@ const deletingItem = (empty) => {
 const deleteWithClass = (elements, classElement) => {
 	elements.classList.remove(classElement);
 }
+
+//elimina elemento html por id
+const deleteElement = (elementId) => {
+	document.getElementById(elementId).remove();
+}
+
 
 //agrega clase a un elemento , recibe el elemento y la clase del elemento
 const addWithClass = (elements, classElement) => {
@@ -238,13 +243,13 @@ buttonSend.addEventListener("click",(e)=>{
 })(title, description, buttonSend)
 
  let logo = document.getElementById("titlePage-js"),
- 		 formDisabled = document.getElementById("form-js"),
-		 maxScroll = window.scrollY,
-	 	 minScroll = 0;
+ 		 	 formDisabled = document.getElementById("form-js"),
+			 maxScroll = window.scrollY,
+	 		 minScroll = 0;
 
 let scrolling = (logo, maxScroll, minScroll) => {
 	
-		logo.addEventListener("click", (e)=>{
+		logo.addEventListener("click", () => {
 
 			if( (maxScroll) >= (minScroll) ){
 				 window.scrollTo(0,0)
