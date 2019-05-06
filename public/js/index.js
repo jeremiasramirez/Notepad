@@ -1,4 +1,6 @@
-  
+ 
+function navigatorVibrate(pression){return navigator.vibrate(pression)};
+
 class CreateCard{
 	constructor(title, description){
 		// Entrada de datos
@@ -43,9 +45,10 @@ class CreateCard{
 				deleteWithClassTime(remov, "opacity", 2000)
 
 				let rm = document.getElementById("deleteWindow");
-
+				navigatorVibrate(30);
 				if( rm ){
 					deleteElement("deleteWindow");
+
 				}
 
 					let valid = document.createElement("div");
@@ -206,8 +209,7 @@ buttonSend.addEventListener("click",(e)=>{
 
 		deleteWithClass(fa_plane,"fa-plane-warning");
 
-		 
-		deleteWithClass(fa_plane, "fa-plane-warning")
+	 
 
 
 		if(empty){
@@ -218,6 +220,7 @@ buttonSend.addEventListener("click",(e)=>{
 		}
 	// instanciacion de la clase creadora de card
 		let cr = new CreateCard(title.value, description.value);
+			navigatorVibrate(50);
 
 			cr.createCard();
 			cr.createdValidate();
