@@ -68,6 +68,7 @@ transform: scaleX(.9);
 	letter-spacing: .6px;
 	color: #222;
 	transition: opacity .8s;
+	resize: none;
 }
 .note__description:hover, .note__title:hover {
 	opacity: .6;
